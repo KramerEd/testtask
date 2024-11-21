@@ -1,38 +1,15 @@
 import React from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {INFO_DATA} from '../../constants';
 
-const DATA = [
-  {
-    id: '1',
-    title: 'Weight',
-    value: '15 lbs\n3 oz',
-    timestamp: '1:00 PM Dec 05 2023',
-    backgroundColor: '#FFF7E5', // Light yellow
-  },
-  {
-    id: '2',
-    title: 'Diaper',
-    value: 'Pee\nMedium',
-    timestamp: '2h 55m ago',
-    backgroundColor: 'rgb(180,187,218)', // Light blue
-  },
-  {
-    id: '3',
-    title: 'Feeding',
-    value: 'Formula\n5 oz',
-    timestamp: '2h 30m ago',
-    backgroundColor: '#ecc1af', // Light peach
-  },
-  {
-    id: '4',
-    title: 'Sleep',
-    value: '2h 20m',
-    timestamp: '3h 35m ago',
-    backgroundColor: '#bcb1ce', // Light purple
-  },
-];
+type CardProps = {
+  title: string;
+  value: string;
+  timestamp: string;
+  backgroundColor: string;
+};
 
-const Card = ({title, value, timestamp, backgroundColor}) => (
+const Card = ({title, value, timestamp, backgroundColor}: CardProps) => (
   <View style={[styles.card, {backgroundColor}]}>
     <Text style={styles.title}>{title}</Text>
     <Text style={styles.value}>{value}</Text>
@@ -44,7 +21,7 @@ const HomeScreenInfo = () => {
   return (
     <FlatList
       scrollEnabled={false}
-      data={DATA}
+      data={INFO_DATA}
       renderItem={({item}) => (
         <Card
           title={item.title}

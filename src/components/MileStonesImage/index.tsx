@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
   arrow: {
     fontSize: 24,
     fontWeight: '100',
+    lineHeight: 24,
   },
 });
 

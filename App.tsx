@@ -7,13 +7,13 @@
 
 import React from 'react';
 
-import {RootStack} from './src/navigation';
+import {MyTabs} from './src/navigation';
 import {NavigationContainer} from '@react-navigation/native';
 
 function App(): React.JSX.Element {
   return (
     <NavigationContainer>
-      <RootStack />
+      <MyTabs />
     </NavigationContainer>
   );
 }

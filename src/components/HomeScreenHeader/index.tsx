@@ -3,19 +3,28 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {PHONE_WIDTH} from '../../constants';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import InboxSvg from '../../assets/icons/Inbox.tsx';
+import {useNavigation} from '@react-navigation/native';
 
 const HomeScreenHeader = () => {
   const {top} = useSafeAreaInsets();
+  const {navigate} = useNavigation();
   return (
     <View style={[styles.container, {paddingTop: top}]}>
       <View style={styles.noFlex}>
         <Text style={styles.headerTitle}>Woddle</Text>
       </View>
       <View style={styles.headerIcons}>
-        <TouchableOpacity style={styles.inboxIcon}>
+        <TouchableOpacity
+          onPress={() => {
+            navigate('Inbox');
+          }}
+          style={styles.inboxIcon}>
           <InboxSvg hasDot />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigate('Profile');
+          }}>
           <Image
             source={{uri: 'https://avatar.iran.liara.run/public'}}
             style={styles.avatar}

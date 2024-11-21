@@ -35,3 +35,34 @@ export const CAROUSEL_DATA = [
     url: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJhYnl8ZW58MHwwfDB8fHww',
   },
 ];
+
+export const INFO_DATA = [
+  {
+    id: '1',
+    title: 'Weight',
+    value: '15 lbs\n3 oz',
+    timestamp: '1:00 PM Dec 05 2023',
+    backgroundColor: '#FFF7E5', // Light yellow
+  },
+  {
+    id: '2',
+    title: 'Diaper',
+    value: 'Pee\nMedium',
+    timestamp: '2h 55m ago',
+    backgroundColor: 'rgb(180,187,218)', // Light blue
+  },
+  {
+    id: '3',
+    title: 'Feeding',
+    value: 'Formula\n5 oz',
+    timestamp: '2h 30m ago',
+    backgroundColor: '#ecc1af', // Light peach
+  },
+  {
+    id: '4',
+    title: 'Sleep',
+    value: '2h 20m',
+    timestamp: '3h 35m ago',
+    backgroundColor: '#bcb1ce', // Light purple
+  },
+];
