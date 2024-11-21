@@ -8,7 +8,7 @@ const HomeScreenHeader = () => {
   const {top} = useSafeAreaInsets();
   return (
     <View style={[styles.container, {paddingTop: top}]}>
-      <View style={{flex: 0}}>
+      <View style={styles.noFlex}>
         <Text style={styles.headerTitle}>Woddle</Text>
       </View>
       <View style={styles.headerIcons}>
@@ -38,6 +38,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
     gap: 20,
+  },
+  noFlex: {
+    flex: 0,
   },
   headerTitle: {
     fontFamily: 'Ribeye',
