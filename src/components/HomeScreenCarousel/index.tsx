@@ -29,7 +29,7 @@ const RenderItem = ({item: {age, url, gender, name}}: ItemProps) => {
     <View style={style.itemContainer}>
       <View style={style.itemInfo}>
         <View style={{flexDirection: 'row', gap: 10, flex: 1}}>
-          <Text>{name}</Text>
+          <Text style={style.itemName}>{name}</Text>
           {gender === 'male' ? <Gender /> : <Text>{gender}</Text>}
         </View>
         <Text>{age}</Text>
@@ -117,6 +117,14 @@ const HomePageCarousel = () => {
 };
 
 const style = StyleSheet.create({
+  itemName: {
+    color: 'rgba(54, 54, 54, 1)',
+    fontFamily: 'Cabin',
+    fontWeight: '700',
+  },
+  age: {
+    color: 'rgba(54, 54, 54, 0.5)',
+  },
   dotsFlatList: {
     position: 'absolute',
     bottom: 10,
